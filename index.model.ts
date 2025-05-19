@@ -6,7 +6,7 @@ import { Theme } from "./theme.model";
 import { UserPermission } from "./user-permission.model";
 import { ActivityLog } from "./activity-logs.model";
 import { ErrorLog } from "./error-logs.model";
-import { User } from "./user.model";
+import { SuperAdmin } from "./super-admin.model";
 
 export const initMainMySQLModels = (connection: Sequelize) => {
     // Initialize models here
@@ -17,7 +17,7 @@ export const initMainMySQLModels = (connection: Sequelize) => {
     Theme.initModel(connection);
     ActivityLog.initModel(connection);
     ErrorLog.initModel(connection);
-    User.initModel(connection);
+    SuperAdmin.initModel(connection);
 
     // Initialize associations here
     Role.initAssociations();
@@ -27,7 +27,7 @@ export const initMainMySQLModels = (connection: Sequelize) => {
     Theme.initAssociations();
     ActivityLog.initAssociations();
     ErrorLog.initAssociations();
-    User.initAssociations();
+    SuperAdmin.initAssociations();
 
     // Initialize hooks here
 }
